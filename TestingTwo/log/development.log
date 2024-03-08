@@ -2062,3 +2062,207 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 205ms (Views: 163.1ms | ActiveRecord: 32.8ms | Allocations: 9613)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-08 16:10:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/oliver/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/oliver/.rvm/gems/ruby-3.2.1/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 376)
+Completed 200 OK in 144ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 4304)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2024-03-08 16:10:59 -0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (21.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (6.8ms)[0m  [1m[34mSELECT "skills".* FROM "skills" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (Duration: 650.5ms | Allocations: 18094)
+  Rendered layout layouts/application.html.erb (Duration: 1451.4ms | Allocations: 50583)
+Completed 200 OK in 1583ms (Views: 1213.3ms | ActiveRecord: 250.8ms | Allocations: 57668)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2024-03-08 16:11:30 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.9ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 1373)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 1686)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2024-03-08 16:19:30 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.5ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 14662)
+Completed 200 OK in 99ms (Views: 86.8ms | ActiveRecord: 0.0ms | Allocations: 16157)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-03-08 16:19:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/blogs" for 127.0.0.1 at 2024-03-08 16:20:06 -0500
+Processing by BlogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (211.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (Duration: 263.3ms | Allocations: 7136)
+  Rendered layout layouts/application.html.erb (Duration: 275.7ms | Allocations: 8268)
+Completed 200 OK in 287ms (Views: 30.1ms | ActiveRecord: 252.0ms | Allocations: 8835)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2024-03-08 16:22:34 -0500
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/about.html.erb:5
+  Rendered pages/about.html.erb within layouts/application (Duration: 130.0ms | Allocations: 3800)
+  Rendered layout layouts/application.html.erb (Duration: 273.3ms | Allocations: 18394)
+Completed 200 OK in 297ms (Views: 205.8ms | ActiveRecord: 77.0ms | Allocations: 19875)
+
+
+Started GET "/tables" for 127.0.0.1 at 2024-03-08 16:31:28 -0500
+Processing by TablesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/index.html.erb within layouts/application
+  [1m[36mTable Load (186.6ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  ↳ app/views/tables/index.html.erb:6
+  Rendered tables/index.html.erb within layouts/application (Duration: 209.0ms | Allocations: 3671)
+  Rendered layout layouts/application.html.erb (Duration: 229.0ms | Allocations: 4795)
+Completed 200 OK in 243ms (Views: 4.6ms | ActiveRecord: 227.7ms | Allocations: 5722)
+
+
+  [1m[36mPortfolio Load (6.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/tables" for 127.0.0.1 at 2024-03-08 18:01:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TablesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tables/index.html.erb within layouts/application
+  [1m[36mTable Load (3.9ms)[0m  [1m[34mSELECT "tables".* FROM "tables"[0m
+  ↳ app/views/tables/index.html.erb:6
+  Rendered tables/index.html.erb within layouts/application (Duration: 265.5ms | Allocations: 5159)
+  Rendered layout layouts/application.html.erb (Duration: 770.6ms | Allocations: 36320)
+Completed 200 OK in 994ms (Views: 775.2ms | ActiveRecord: 53.8ms | Allocations: 46247)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:08:49 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:12:36 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:13:54 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:14:43 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+    end
+       ^
+):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:15:01 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+    end
+       ^
+):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:15:32 -0500
+  
+SyntaxError (/home/oliver/Repositorios/RubyOnRails/TestingTwo/app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+  end
+     ^
+):
+  
+app/controllers/portfolios_controller.rb:4: syntax error, unexpected end-of-input
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:16:14 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1297)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 2876)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Portfolio items</h1>
+
+<% @portfolio_items.each do |portfolio_item| $>
+    <p><%= portfolio_item.title %></p>
+    <p><%= portfolio_item.subtitle %></p>
+    <p><%= portfolio_item.body %></p>
+    <p><%= portfolio_item.body %></p>
+    <p><%= portfolio_item.thumb_image %></p>
+    
+<% end %>
+
+):
+1:    <h1>Portfolio items</h1>
+2:    
+3:    <% @portfolio_items.each do |portfolio_item| $>
+4:        <p><%= portfolio_item.title %></p>
+5:        <p><%= portfolio_item.subtitle %></p>
+6:        <p><%= portfolio_item.body %></p>
+7:        <p><%= portfolio_item.body %></p>
+8:        <p><%= portfolio_item.thumb_image %></p>
+9:        
+10:    <% end %>
+  
+app/views/portfolios/index.html.erb:4: syntax error, unexpected '<'
+app/views/portfolios/index.html.erb:12: syntax error, unexpected `end'
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:17:14 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1152)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1244)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 2710)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Portfolio items</h1>
+    2: 
+    3: <% @portfolio_items.each do |portfolio_item| %>
+    4:     <p><%= portfolio_item.title %></p>
+    5:     <p><%= portfolio_item.subtitle %></p>
+    6:     <p><%= portfolio_item.body %></p>
+  
+app/views/portfolios/index.html.erb:3
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:18:07 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (218.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 478.9ms | Allocations: 16051)
+  Rendered layout layouts/application.html.erb (Duration: 587.1ms | Allocations: 30603)
+Completed 200 OK in 610ms (Views: 242.0ms | ActiveRecord: 353.6ms | Allocations: 32093)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2024-03-08 18:19:19 -0500
+Processing by PortfoliosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (4.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:3
+  Rendered portfolios/index.html.erb within layouts/application (Duration: 69.1ms | Allocations: 4432)
+  Rendered layout layouts/application.html.erb (Duration: 163.2ms | Allocations: 18977)
+Completed 200 OK in 189ms (Views: 142.0ms | ActiveRecord: 31.6ms | Allocations: 20466)
+
+
